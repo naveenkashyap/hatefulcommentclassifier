@@ -235,7 +235,7 @@ def reduce_dimension(X, k=None, VT=None):
 
 models = {
     sklearn.svm.SVC: [
-        ((C,), {'kernel': 'linear', 'gamma': 'auto'})
+        ((C,), {'kernel': 'linear', 'gamma': 'auto', 'class_weight': 'balanced'})
         for C in np.linspace(0.1, 4.0, 40)
     ],
 }

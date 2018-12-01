@@ -1,0 +1,9 @@
+nltk
+matplotlib
+numpy
+scikit-learn
+pandas
+tqdm
+surprise
+
+jupyter

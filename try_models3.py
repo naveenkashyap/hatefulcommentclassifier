@@ -217,7 +217,7 @@ def run_models(te, models):
 models = {
     sklearn.svm.SVC: [
         ((C,), {'kernel': 'linear', 'gamma': 'auto', 'class_weight': 'balanced'})
-        for C in np.linspace(0.1, 1.3, 30)
+        for C in np.linspace(1.2, 0.5, 15)
     ],
 }
 
@@ -242,5 +242,5 @@ if __name__ == '__main__':
     te = partial(train_and_eval, X_train, y_train, X_valid, y_valid)
     results = run_models(te, models)
 
-    with open('out/results_svm2.pkl', 'wb') as outfile:
+    with open('out/results_svm3.pkl', 'wb') as outfile:
         pickle.dump(results, outfile)
